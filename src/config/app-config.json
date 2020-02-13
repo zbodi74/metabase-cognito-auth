@@ -11,5 +11,7 @@
         "profile",
         "https://cognito-demo-api.arronharden.com/hello-world.all"                
     ],
-    "apiUri": "https://cognito-demo-api.arronharden.com"
+    "apiUri": "https://cognito-demo-api.arronharden.com",
+    "metabaseSecret": "REPLACE WITH KEY FROM http://localhost:3000/admin/settings/authentication/jwt",
+    "metabaseUri": "http://localhost:3000"
 }
