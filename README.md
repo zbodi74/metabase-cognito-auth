@@ -5,6 +5,9 @@ This application was created from the create-react-app script, and demonstrates 
 - I had to create an App client with no secret key, otherwise I got a [`invalid_client`](https://github.com/aws/amazon-cognito-auth-js/issues/206) exception.
 - App client settings require `Authorization code grant` and `email`, `openid`, `profile`, and (optionally) `aws.cognito.signin.user.admin`.
 
+# ZB: Created a custom domain name for Cognito Auth in App integration / Domain / Create Cognito domain
+
+
 ## Running the application
 
 These instructions assume you are running both Metabase and this demo app locally. As they both run on port 3000 by default, we'll make this app run on port 3001.
@@ -15,7 +18,7 @@ These instructions assume you are running both Metabase and this demo app locall
     - When running locally, the `signoutUri` will need to be `http://localhost:3000/` and the `callbackUri` property will need to be `http://localhost:3000/callback`.
     - Use the JWT Signing Key from from your Metabase settings (http://localhost:3000/admin/settings/authentication/jwt) as the `metabaseSecret`
 3. Run `npm install` to setup and install the dependencies.
-4. Run `PORT=3001 npm start` to start the application.
+4. Run `NODE_OPTIONS=--openssl-legacy-provider PORT=3001 npm start` to start the application.
 5. A browser session should automatically open, pointing at `http://localhost:3001`.
 6. Click "Sign In"!
 
